@@ -1,0 +1,9 @@
+spring:
+  config:
+    import: nacos:im-socket.yml?refresh=true
+  cloud:
+    nacos:
+      config:
+        context-path: /nacos
+        server-addr: 127.0.0.1:8848
+
