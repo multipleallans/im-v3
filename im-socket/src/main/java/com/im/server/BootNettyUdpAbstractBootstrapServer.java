@@ -13,9 +13,7 @@ BootNettyUdpSimpleChannelInboundHandler handler;
 
     void initChannelHandler(ChannelPipeline channelPipeline) {
         System.out.println("initChannelHandler");
-
-        wsServer.getSpringCtx().getBean(BootNettyUdpSimpleChannelInboundHandler.class);
-        channelPipeline.addLast(handler);
+        channelPipeline.addLast(new BootNettyUdpSimpleChannelInboundHandler());
     }
 
 
