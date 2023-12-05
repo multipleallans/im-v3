@@ -114,7 +114,8 @@
             <version>3.2.0-beta.5</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-client -->
+
+        <!-- TODO 引入以下可以解决启动报错,但会让dubbo激活rest调用service从而报错 -->
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-client</artifactId>
