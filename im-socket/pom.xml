@@ -113,6 +113,14 @@
             </exclusions>
             <version>3.2.0-beta.5</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jboss.resteasy/resteasy-client -->
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-client</artifactId>
+            <version>3.6.3.Final</version>
+        </dependency>
+
     </dependencies>
 
     <build>
