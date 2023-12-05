@@ -15,11 +15,11 @@ public class BusinessServiceImpl implements BusinessService {
     ImService imService;
 
     @Override
-    @Async("threadPoolTaskExecutor")
+    @Async
     public void udpHandleMethod(String message) throws Exception {
         log.info("业务开始处理");
         imService.get(3);
-        Thread.sleep(3000);
+        Thread.sleep(300);
         log.info("业务处理完成");
     }
 

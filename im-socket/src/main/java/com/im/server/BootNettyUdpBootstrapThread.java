@@ -1,8 +1,6 @@
 package com.im.server;
 
 
-import com.im.service.BootNettyUdpBootstrap;
-
 public class BootNettyUdpBootstrapThread extends Thread {
 
     private final int port;
@@ -12,8 +10,9 @@ public class BootNettyUdpBootstrapThread extends Thread {
     }
 
     public void run() {
-        BootNettyUdpBootstrap iotUdpBootstrap = new BootNettyUdpBootstrapServer();
-        iotUdpBootstrap.startup(this.port);
+        BootNettyUdpBootstrapServer iotUdpBootstrap = new BootNettyUdpBootstrapServer();
+        iotUdpBootstrap.setPort(port);
+        iotUdpBootstrap.startup();
     }
 
 

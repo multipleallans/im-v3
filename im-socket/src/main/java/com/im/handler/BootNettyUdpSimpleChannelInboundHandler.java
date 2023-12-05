@@ -1,6 +1,5 @@
 package com.im.handler;
 
-import com.im.api.service.ImService;
 import com.im.cache.BootNettyUdpDataCache;
 import com.im.dto.BootNettyUdpData;
 import com.im.service.BusinessService;
@@ -9,14 +8,11 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.socket.DatagramPacket;
 import io.netty.util.CharsetUtil;
-import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 
-@Service
+@Component
 public class BootNettyUdpSimpleChannelInboundHandler extends SimpleChannelInboundHandler<DatagramPacket> {
 
     @Autowired
@@ -36,6 +32,7 @@ public class BootNettyUdpSimpleChannelInboundHandler extends SimpleChannelInboun
             ctx.writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer("udp server response timestamp: "+ time_stamp, CharsetUtil.UTF_8), packet.sender()));
 
         } catch (Exception e) {
+            e.printStackTrace();
             ctx.writeAndFlush(new DatagramPacket(Unpooled.copiedBuffer("exception", CharsetUtil.UTF_8), packet.sender()));
             System.out.println("received exception--data:"+packet.content().toString(CharsetUtil.UTF_8)+"--"+e.toString());
         }
