@@ -116,11 +116,11 @@
 
 
         <!-- TODO 引入以下可以解决启动报错,但会让dubbo激活rest调用service从而报错 -->
-        <dependency>
-            <groupId>org.jboss.resteasy</groupId>
-            <artifactId>resteasy-client</artifactId>
-            <version>3.6.3.Final</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.jboss.resteasy</groupId>-->
+<!--            <artifactId>resteasy-client</artifactId>-->
+<!--            <version>3.6.3.Final</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 
