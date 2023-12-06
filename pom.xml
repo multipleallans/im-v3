@@ -21,6 +21,10 @@
         <spring-boot.version>3.0.2</spring-boot.version>
         <spring-cloud-alibaba.version>2022.0.0.0-RC2</spring-cloud-alibaba.version>
         <spring-cloud.version>2022.0.0</spring-cloud.version>
+        <commons-lang3.version>3.12.0</commons-lang3.version>
+        <guava.version>23.0</guava.version>
+        <fastJson.version>2.0.12</fastJson.version>
+        <commons-net.version>3.8.0</commons-net.version>
     </properties>
 
 
