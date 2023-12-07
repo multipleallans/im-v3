@@ -5,6 +5,7 @@ import com.im.dao.BaseDAO;
 import com.im.entity.BaseEntity;
 import com.im.service.BaseService;
 //import org.hibernate.criterion.DetachedCriteria;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,7 +22,7 @@ import java.util.List;
 public class BaseServiceImpl<T, PK extends Serializable> implements
 		BaseService<T, PK> {
 
-	@Resource
+	@Autowired
 	public BaseDAO<T, PK> baseDao;
 
 	

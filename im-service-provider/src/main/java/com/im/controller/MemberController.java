@@ -20,6 +20,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpStatus;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -36,20 +37,21 @@ public class MemberController {
 
     public static final String REDIS_WSS_KEY="websocket:userid:address";
 
+    @Autowired
     private Environment environment;
-
+    @Autowired
     private MemberService memberService;
-
+    @Autowired
     private IpListService ipListService;
-
+    @Autowired
     private RoomService roomService;
-
+    @Autowired
     private WebConfigService configService;
-
+    @Autowired
     private ChatStoreComponent chatStoreComponent;
-
+    @Autowired
     private RedisService redisService;
-
+    @Autowired
     private TrajectoryService trajectoryService;
     @RequestMapping(value = "/loginV2", method = {RequestMethod.POST, RequestMethod.OPTIONS})
     public void loginV2(HttpServletRequest request, HttpServletResponse response) throws Exception {

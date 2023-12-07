@@ -2,6 +2,7 @@ package com.im.dao.impl;
 
 import com.im.bean.Pager;
 import com.im.dao.BaseDAO;
+import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Query;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ArrayUtils;
@@ -11,6 +12,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 //import org.hibernate.criterion.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
@@ -27,14 +29,14 @@ import java.util.List;
 @Slf4j
 public class BaseDAOImpl implements BaseDAO {
 
-    @Resource(name = "sessionFactory")
-    private SessionFactory sessionFactory;
-
     public BaseDAOImpl() {
     }
 
-    private Session getSession() {
-        return sessionFactory.getCurrentSession();
+    @Autowired
+    private EntityManagerFactory entityManagerFactory;
+
+    public Session getSession() {
+        return entityManagerFactory.unwrap(SessionFactory.class).openSession();
     }
 
     public Object get(Class entityClass, Serializable id) {
@@ -577,11 +579,10 @@ public class BaseDAOImpl implements BaseDAO {
         return null;
     }
 
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
+    public void setEntityManagerFactory(EntityManagerFactory entityManagerFactory) {
+        this.entityManagerFactory = entityManagerFactory;
     }
-
-//    @Override
+    //    @Override
 //    @Transactional
 //    public void update(Class entityClass, String[] ps, Object[] vs, String where) {
 //        getSession().createQuery(createUpdateHql(entityClass, ps, vs) + " " + where);
