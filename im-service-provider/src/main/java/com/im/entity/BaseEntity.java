@@ -2,9 +2,10 @@ package com.im.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
+import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
-import org.springframework.data.annotation.Id;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,6 +13,7 @@ import java.util.Date;
 /**
  *	实体基础类 
  */
+@Data
 @SuppressWarnings("serial")
 @MappedSuperclass
 public class BaseEntity implements Serializable {

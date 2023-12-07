@@ -1,8 +1,7 @@
 package com.im.service;
 
-
+import com.im.bean.Pager;
 import com.im.entity.*;
-import com.im.utils.Pager;
 
 import java.util.List;
 

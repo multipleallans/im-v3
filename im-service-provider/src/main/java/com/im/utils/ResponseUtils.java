@@ -1,5 +1,7 @@
 package com.im.utils;
 
+
+import com.im.utils.JsonUtil;
 import com.google.common.collect.ImmutableMap;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
@@ -14,11 +16,10 @@ public class ResponseUtils {
 	public enum STATUS {
 		success,error
 	}
-	
+
 	//如果msg为空则前台不显示信息，如果redirectUri为空前台不做跳转
 	public static void json(HttpServletResponse response, STATUS status, String msg, String redirectUri) {
 		try {
-			JsonUtil.getJSONString()
 			String json = JsonUtil.getJSONString((Map) ImmutableMap.of("status",status.name(), "msg", StringUtils.isEmpty(msg)?"":msg,"redirectUri",StringUtils.isEmpty(redirectUri)?"":redirectUri));
 			if (null == redirectUri ){
 				response.setContentType("application/json");
@@ -31,7 +32,7 @@ public class ResponseUtils {
 			log.error("json response",e);
 		}
 	}
-	
+
 	//如果msg为空则前台不显示信息，如果redirectUri为空前台不做跳转
 	public static void json( HttpServletResponse response,int code,String msg,String redirectUri)  {
 		try {
@@ -65,5 +66,6 @@ public class ResponseUtils {
 		}
 
 	}
-	
+
 }
+

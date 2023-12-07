@@ -1,6 +1,7 @@
 package com.im.utils;
 
 import com.alibaba.fastjson2.JSONObject;
+import com.im.entity.IpAddrEntity;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

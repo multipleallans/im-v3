@@ -2,6 +2,9 @@ package com.im.controller;
 
 
 import com.alibaba.fastjson2.JSONObject;
+import com.im.bean.MemberBean;
+import com.im.bean.RoomBean;
+import com.im.bean.store.ChatStoreComponent;
 import com.im.constant.MemberConstant;
 import com.im.entity.*;
 import com.im.entity.Member.MEMBER_TYPE;
@@ -9,22 +12,19 @@ import com.im.mq.RabbitmqConfig;
 import com.im.service.*;
 import com.im.utils.*;
 
+import com.im.utils.redis.RedisService;
+import com.im.utils.web.BeanUtils;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpStatus;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.WebUtils;
 
-import java.io.File;
-import java.text.DecimalFormat;
 import java.util.*;
-import java.util.concurrent.CompletableFuture;
 
 
 @Controller("MemberJsonController")
@@ -34,11 +34,23 @@ import java.util.concurrent.CompletableFuture;
 @Slf4j
 public class MemberController {
 
+    public static final String REDIS_WSS_KEY="websocket:userid:address";
+
     private Environment environment;
 
     private MemberService memberService;
 
     private IpListService ipListService;
+
+    private RoomService roomService;
+
+    private WebConfigService configService;
+
+    private ChatStoreComponent chatStoreComponent;
+
+    private RedisService redisService;
+
+    private TrajectoryService trajectoryService;
     @RequestMapping(value = "/loginV2", method = {RequestMethod.POST, RequestMethod.OPTIONS})
     public void loginV2(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String account = request.getParameter("account");
@@ -158,7 +170,7 @@ public class MemberController {
 
             trajectoryService.generate(mb, "登陆了游戏(H5)");
             /**写入redis*/
-            redisService.hPut(SessionStore.REDIS_WSS_KEY, member.getId(), addressIp + port);
+            redisService.hPut(REDIS_WSS_KEY, member.getId(), addressIp + port);
             log.info("------登录结束");
             Object independenceRoomUUID = request.getSession().getAttribute("IndependenceRoomUUID");
             if (null == independenceRoomUUID || StringUtils.isEmpty(independenceRoomUUID.toString())) {
