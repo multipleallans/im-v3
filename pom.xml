@@ -12,6 +12,8 @@
         <module>im-service-provider</module>
         <module>im-service-api</module>
         <module>im-socket</module>
+        <module>im-entity</module>
+        <module>im-dao</module>
     </modules>
 
     <properties>
