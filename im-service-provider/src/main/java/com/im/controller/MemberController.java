@@ -36,22 +36,13 @@ import java.util.*;
 public class MemberController {
 
     public static final String REDIS_WSS_KEY="websocket:userid:address";
-
-    @Autowired
     private Environment environment;
-    @Autowired
     private MemberService memberService;
-    @Autowired
     private IpListService ipListService;
-    @Autowired
     private RoomService roomService;
-    @Autowired
     private WebConfigService configService;
-    @Autowired
     private ChatStoreComponent chatStoreComponent;
-    @Autowired
     private RedisService redisService;
-    @Autowired
     private TrajectoryService trajectoryService;
     @RequestMapping(value = "/loginV2", method = {RequestMethod.POST, RequestMethod.OPTIONS})
     public void loginV2(HttpServletRequest request, HttpServletResponse response) throws Exception {
