@@ -24,7 +24,7 @@ public class SqlUtil {
 //            String str="hello world!";
             FileWriter writer;
             try {
-                writer = new FileWriter("E:/im_v3.sql");
+                writer = new FileWriter("E:/new_room_member.sql");
 //                writer.append(sb);
                 writer.write(sb.toString());
                 writer.flush();
