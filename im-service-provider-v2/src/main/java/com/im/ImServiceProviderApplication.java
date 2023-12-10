@@ -1,19 +1,13 @@
 package com.im;
 
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
-import org.hibernate.SessionFactory;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.context.annotation.Bean;
 import org.springframework.core.env.Environment;
-import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
 import org.springframework.scheduling.annotation.EnableAsync;
-
-import javax.sql.DataSource;
-import java.util.Properties;
 
 @MapperScan(value = "com.im.persistence.mapper")
 @EnableDubbo
