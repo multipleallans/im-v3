@@ -1,7 +1,7 @@
 package com.im.persistence.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.im.persistence.entity.YySendGroupMsg;
+import com.im.domain.entity.YySendGroupMsg;
 
 /**
  * <p>

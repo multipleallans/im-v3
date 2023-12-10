@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.BlackList;
+import com.im.domain.entity.BlackList;
 import com.im.persistence.mapper.BlackListMapper;
 import com.im.persistence.service.BlackListPersistenceService;
 import org.springframework.stereotype.Service;

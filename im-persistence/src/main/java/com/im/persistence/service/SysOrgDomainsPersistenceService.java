@@ -1,7 +1,7 @@
 package com.im.persistence.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.im.persistence.entity.SysOrgDomains;
+import com.im.domain.entity.SysOrgDomains;
 
 /**
  * <p>

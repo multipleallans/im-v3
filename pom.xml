@@ -14,6 +14,7 @@
         <module>im-socket</module>
         <module>im-persistence</module>
         <module>im-service-provider-v2</module>
+        <module>im-domain</module>
     </modules>
 
     <properties>

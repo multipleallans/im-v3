@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.DefaultEmoticon;
+import com.im.domain.entity.DefaultEmoticon;
 import com.im.persistence.mapper.DefaultEmoticonMapper;
 import com.im.persistence.service.DefaultEmoticonPersistenceService;
 import org.springframework.stereotype.Service;

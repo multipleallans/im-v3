@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.Favourite;
+import com.im.domain.entity.Favourite;
 import com.im.persistence.mapper.FavouriteMapper;
 import com.im.persistence.service.FavouritePersistenceService;
 import org.springframework.stereotype.Service;

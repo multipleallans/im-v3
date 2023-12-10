@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.Notice;
+import com.im.domain.entity.Notice;
 import com.im.persistence.mapper.NoticeMapper;
 import com.im.persistence.service.NoticePersistenceService;
 import org.springframework.stereotype.Service;

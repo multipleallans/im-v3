@@ -1,6 +1,5 @@
 package com.im.business.bean;
 
-import com.im.persistence.entity.Member.MEMBER_TYPE;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -27,7 +26,7 @@ public class MemberBean {
 	private Date createDate;
 	private String preTxImg="";//最近一次提现使用的二维码
 	private Integer preTxPay=1;//最近一次提现收款方式
-	private MEMBER_TYPE member_type;
+	private Integer member_type;
 	private String parent_uuid;//上级UUID
 	/**数据统计**/
 	private Double rechargePriceSum = 0.0;//充值累计
@@ -160,10 +159,10 @@ public class MemberBean {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	public MEMBER_TYPE getMember_type() {
+	public Integer getMember_type() {
 		return member_type;
 	}
-	public void setMember_type(MEMBER_TYPE member_type) {
+	public void setMember_type(Integer member_type) {
 		this.member_type = member_type;
 	}
 	public Long getUnDoFriendAddCount() {
@@ -260,27 +259,27 @@ public class MemberBean {
 	}
 	
 	//根据roombean来获取用户金额，如果房间不是独立房间，则返回平台金额
-	public Double getMoney(RoomBean rb) {
-		if(rb.getIndependence()==1&&this.member_type!=MEMBER_TYPE.ROBOT) {
-			if(this.irupMap.containsKey(rb.getRoomUUID())) {
-				return this.irupMap.get(rb.getRoomUUID());
-			} else {
-				return 0.0;
-			}
-		} else {
-			return getMoney();
-		}
-	}
-	
-	//根据roombean来设置用户金额，如果房间不是独立房间，则设置平台金额
-	public void setMoney(RoomBean rb,Double money) {
-		if(rb.getIndependence()==1&&this.member_type!=MEMBER_TYPE.ROBOT) {
-			this.irupMap.put(rb.getRoomUUID(),money);
-		} else {
-			setMoney(money);
-		}
-	}
-	
+//	public Double getMoney(RoomBean rb) {
+//		if(rb.getIndependence()==1&&this.member_type!=MEMBER_TYPE.ROBOT) {
+//			if(this.irupMap.containsKey(rb.getRoomUUID())) {
+//				return this.irupMap.get(rb.getRoomUUID());
+//			} else {
+//				return 0.0;
+//			}
+//		} else {
+//			return getMoney();
+//		}
+//	}
+//
+//	//根据roombean来设置用户金额，如果房间不是独立房间，则设置平台金额
+//	public void setMoney(RoomBean rb,Double money) {
+//		if(rb.getIndependence()==1&&this.member_type!=MEMBER_TYPE.ROBOT) {
+//			this.irupMap.put(rb.getRoomUUID(),money);
+//		} else {
+//			setMoney(money);
+//		}
+//	}
+//
 	
 	public Double getMoney() {
 		return money;

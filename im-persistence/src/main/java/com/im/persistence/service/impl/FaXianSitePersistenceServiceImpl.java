@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.FaXianSite;
+import com.im.domain.entity.FaXianSite;
 import com.im.persistence.mapper.FaXianSiteMapper;
 import com.im.persistence.service.FaXianSitePersistenceService;
 import org.springframework.stereotype.Service;

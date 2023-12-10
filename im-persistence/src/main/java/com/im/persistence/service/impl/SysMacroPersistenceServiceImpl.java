@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.SysMacro;
+import com.im.domain.entity.SysMacro;
 import com.im.persistence.mapper.SysMacroMapper;
 import com.im.persistence.service.SysMacroPersistenceService;
 import org.springframework.stereotype.Service;

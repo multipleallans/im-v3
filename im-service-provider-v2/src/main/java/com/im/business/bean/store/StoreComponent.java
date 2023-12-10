@@ -1,7 +1,7 @@
 package com.im.business.bean.store;//package com.im.bean.store;
 //
 //import com.im.bean.MemberBean;
-//import com.im.persistence.entity.Blacklist;
+//import com.im.domain.entity.Blacklist;
 //import com.im.persistence.service.MemberService;
 //import com.im.utils.redis.RedisService;
 //import com.im.utils.web.BeanUtils;

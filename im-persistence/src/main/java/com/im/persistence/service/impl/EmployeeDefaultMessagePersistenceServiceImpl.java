@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.EmployeeDefaultMessage;
+import com.im.domain.entity.EmployeeDefaultMessage;
 import com.im.persistence.mapper.EmployeeDefaultMessageMapper;
 import com.im.persistence.service.EmployeeDefaultMessagePersistenceService;
 import org.springframework.stereotype.Service;

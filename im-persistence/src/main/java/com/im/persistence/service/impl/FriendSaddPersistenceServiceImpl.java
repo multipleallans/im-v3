@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.FriendSadd;
+import com.im.domain.entity.FriendSadd;
 import com.im.persistence.mapper.FriendSaddMapper;
 import com.im.persistence.service.FriendSaddPersistenceService;
 import org.springframework.stereotype.Service;

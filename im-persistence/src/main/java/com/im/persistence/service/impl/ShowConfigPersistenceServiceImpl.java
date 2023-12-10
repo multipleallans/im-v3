@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.ShowConfig;
+import com.im.domain.entity.ShowConfig;
 import com.im.persistence.mapper.ShowConfigMapper;
 import com.im.persistence.service.ShowConfigPersistenceService;
 import org.springframework.stereotype.Service;

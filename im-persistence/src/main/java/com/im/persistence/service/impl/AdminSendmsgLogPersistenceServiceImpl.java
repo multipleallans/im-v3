@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.AdminSendmsgLog;
+import com.im.domain.entity.AdminSendmsgLog;
 import com.im.persistence.mapper.AdminSendmsgLogMapper;
 import com.im.persistence.service.AdminSendmsgLogPersistenceService;
 import org.springframework.stereotype.Service;

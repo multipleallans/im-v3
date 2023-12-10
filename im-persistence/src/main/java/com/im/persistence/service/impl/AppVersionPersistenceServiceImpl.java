@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.AppVersion;
+import com.im.domain.entity.AppVersion;
 import com.im.persistence.mapper.AppVersionMapper;
 import com.im.persistence.service.AppVersionPersistenceService;
 import org.springframework.stereotype.Service;

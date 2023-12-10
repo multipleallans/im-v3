@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.Member;
+import com.im.domain.entity.Member;
 import com.im.persistence.mapper.MemberMapper;
 import com.im.persistence.service.MemberPersistenceService;
 import org.springframework.stereotype.Service;

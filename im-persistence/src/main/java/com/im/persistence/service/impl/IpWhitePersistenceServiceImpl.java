@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.IpWhite;
+import com.im.domain.entity.IpWhite;
 import com.im.persistence.mapper.IpWhiteMapper;
 import com.im.persistence.service.IpWhitePersistenceService;
 import org.springframework.stereotype.Service;

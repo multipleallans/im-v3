@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.SysLog;
+import com.im.domain.entity.SysLog;
 import com.im.persistence.mapper.SysLogMapper;
 import com.im.persistence.service.SysLogPersistenceService;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.MessageHistory;
+import com.im.domain.entity.MessageHistory;
 import com.im.persistence.mapper.MessageHistoryMapper;
 import com.im.persistence.service.MessageHistoryPersistenceService;
 import org.springframework.stereotype.Service;

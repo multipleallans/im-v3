@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.SysRoleOrg;
+import com.im.domain.entity.SysRoleOrg;
 import com.im.persistence.mapper.SysRoleOrgMapper;
 import com.im.persistence.service.SysRoleOrgPersistenceService;
 import org.springframework.stereotype.Service;

@@ -1,7 +1,7 @@
 package com.im.persistence.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.im.persistence.entity.FriendSadd;
+import com.im.domain.entity.FriendSadd;
 
 /**
  * <p>

@@ -1,7 +1,7 @@
 package com.im.persistence.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.im.persistence.entity.YySendGroupMsg;
+import com.im.domain.entity.YySendGroupMsg;
 import com.im.persistence.mapper.YySendGroupMsgMapper;
 import com.im.persistence.service.YySendGroupMsgPersistenceService;
 import org.springframework.stereotype.Service;

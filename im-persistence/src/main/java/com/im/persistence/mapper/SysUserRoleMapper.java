@@ -1,7 +1,7 @@
 package com.im.persistence.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.im.persistence.entity.SysUserRole;
+import com.im.domain.entity.SysUserRole;
 
 /**
  * <p>

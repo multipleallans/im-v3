@@ -1,0 +1,38 @@
+package com.im.domain.entity;
+
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.io.Serializable;
+import java.time.LocalDateTime;
+
+/**
+ * <p>
+ * 
+ * </p>
+ *
+ * @author jojo
+ * @since 2023-12-10 10:03:23
+ */
+@Getter
+@Setter
+@TableName("friend_sadd")
+public class FriendSadd implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    private String id;
+
+    private LocalDateTime createDate;
+
+    private LocalDateTime modifyDate;
+
+    private String content;
+
+    private String friendid;
+
+    private String mid;
+
+    private Integer status;
+}
