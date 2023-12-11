@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -65,7 +65,7 @@ public class SysLog implements Serializable {
     /**
      * 创建时间
      */
-    private LocalDateTime gmtCreate;
+    private Date gmtCreate;
 
     private Integer orgId;
 }

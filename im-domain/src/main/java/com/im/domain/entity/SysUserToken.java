@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -35,12 +35,12 @@ public class SysUserToken implements Serializable {
     /**
      * 过期时间
      */
-    private LocalDateTime gmtExpire;
+    private Date gmtExpire;
 
     /**
      * 更新时间
      */
-    private LocalDateTime gmtModified;
+    private Date gmtModified;
 
     private Integer orgId;
 }

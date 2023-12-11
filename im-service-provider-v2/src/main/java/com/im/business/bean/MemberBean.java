@@ -1,9 +1,11 @@
 package com.im.business.bean;
 
 
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import com.im.domain.entity.MemberType;
 
 public class MemberBean {
 
@@ -26,7 +28,7 @@ public class MemberBean {
 	private Date createDate;
 	private String preTxImg="";//最近一次提现使用的二维码
 	private Integer preTxPay=1;//最近一次提现收款方式
-	private Integer member_type;
+	private MemberType MemberType;
 	private String parent_uuid;//上级UUID
 	/**数据统计**/
 	private Double rechargePriceSum = 0.0;//充值累计
@@ -159,11 +161,11 @@ public class MemberBean {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	public Integer getMember_type() {
-		return member_type;
+	public MemberType getMemberType() {
+		return MemberType;
 	}
-	public void setMember_type(Integer member_type) {
-		this.member_type = member_type;
+	public void setMemberType(MemberType MemberType) {
+		this.MemberType = MemberType;
 	}
 	public Long getUnDoFriendAddCount() {
 		return unDoFriendAddCount;
@@ -260,7 +262,7 @@ public class MemberBean {
 	
 	//根据roombean来获取用户金额，如果房间不是独立房间，则返回平台金额
 //	public Double getMoney(RoomBean rb) {
-//		if(rb.getIndependence()==1&&this.member_type!=MEMBER_TYPE.ROBOT) {
+//		if(rb.getIndependence()==1&&this.MemberType!=MemberType.ROBOT) {
 //			if(this.irupMap.containsKey(rb.getRoomUUID())) {
 //				return this.irupMap.get(rb.getRoomUUID());
 //			} else {
@@ -273,7 +275,7 @@ public class MemberBean {
 //
 //	//根据roombean来设置用户金额，如果房间不是独立房间，则设置平台金额
 //	public void setMoney(RoomBean rb,Double money) {
-//		if(rb.getIndependence()==1&&this.member_type!=MEMBER_TYPE.ROBOT) {
+//		if(rb.getIndependence()==1&&this.MemberType!=MemberType.ROBOT) {
 //			this.irupMap.put(rb.getRoomUUID(),money);
 //		} else {
 //			setMoney(money);

@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -73,12 +73,12 @@ public class SysUser implements Serializable {
     /**
      * 创建时间
      */
-    private LocalDateTime gmtCreate;
+    private Date gmtCreate;
 
     /**
      * 修改时间
      */
-    private LocalDateTime gmtModified;
+    private Date gmtModified;
 
     /**
      * 谷歌秘钥
@@ -98,5 +98,5 @@ public class SysUser implements Serializable {
     /**
      * 最后登陆时间
      */
-    private LocalDateTime lastLoginTime;
+    private Date lastLoginTime;
 }

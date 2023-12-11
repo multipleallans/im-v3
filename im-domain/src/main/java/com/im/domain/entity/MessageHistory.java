@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -74,9 +74,9 @@ public class MessageHistory implements Serializable {
      */
     private String simpleContent;
 
-    private LocalDateTime createDate;
+    private Date createDate;
 
-    private LocalDateTime modifyDate;
+    private Date modifyDate;
 
     private Integer orgId;
 }

@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -44,7 +44,7 @@ public class YySendGroupMsg implements Serializable {
      */
     private String picture;
 
-    private LocalDateTime createTime;
+    private Date createTime;
 
     private Integer orgId;
 }

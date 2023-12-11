@@ -1,10 +1,11 @@
 package com.im.domain.entity;
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -18,24 +19,20 @@ import java.time.LocalDateTime;
 @Setter
 public class Member implements Serializable {
 
-    //普通用户,机器人,代理
-//    public enum MEMBER_TYPE {
-//        USER,ROBOT,AGENT
-//    }
 
     private static final long serialVersionUID = 1L;
 
     private String id;
 
-    private LocalDateTime createDate;
+    private Date createDate;
 
     private String headpic;
 
-    private LocalDateTime lastLoginDate;
+    private Date lastLoginDate;
 
     private String lastLoginIp;
 
-    private Object money;
+    private Double money;
 
     private String nickName;
 
@@ -53,39 +50,40 @@ public class Member implements Serializable {
 
     private Object txMoney;
 
-    private Object txMoneyIng;
+    private Double txMoneyIng;
 
     private String memberId;
 
-    private Object losePriceSum;
+    @EnumValue
+    private MemberType memberType = MemberType.USER;
+
+    private Double losePriceSum;
 
     private Integer openRedCount;
 
     private String username;
 
-    private Object openRedPriceSum;
+    private Double openRedPriceSum;
 
-    private Object rechargePriceSum;
+    private Double rechargePriceSum;
 
-    private LocalDateTime modifyDate;
+    private Date modifyDate;
 
     private Integer sendRedCount;
 
-    private Object sendRedPriceSum;
+    private Double sendRedPriceSum;
 
-    private Object txPriceSum;
+    private Double txPriceSum;
 
-    private Object winPriceSum;
+    private Double winPriceSum;
 
     private String qrCodeImg;
 
-    private Object tichenPriceSum;
+    private Double tichenPriceSum;
 
     private String preTxImg;
 
     private Integer preTxPay;
-
-    private Integer memberType;
 
     private String parentmid;
 
@@ -127,4 +125,5 @@ public class Member implements Serializable {
      * 站点ID
      */
     private Integer orgId;
+
 }

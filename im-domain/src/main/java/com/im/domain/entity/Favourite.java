@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -22,9 +22,9 @@ public class Favourite implements Serializable {
 
     private String id;
 
-    private LocalDateTime createDate;
+    private Date createDate;
 
-    private LocalDateTime modifyDate;
+    private Date modifyDate;
 
     private Integer ctype;
 

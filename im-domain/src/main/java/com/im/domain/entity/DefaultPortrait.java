@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -32,7 +32,7 @@ public class DefaultPortrait implements Serializable {
     /**
      * 上传时间
      */
-    private LocalDateTime upTime;
+    private Date upTime;
 
     private Integer orgId;
 }

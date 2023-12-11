@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -50,9 +50,9 @@ public class Commodity implements Serializable {
      */
     private String img;
 
-    private LocalDateTime createTime;
+    private Date createTime;
 
-    private LocalDateTime modifyTime;
+    private Date modifyTime;
 
     private String orgId;
 

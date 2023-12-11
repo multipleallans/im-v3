@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -22,9 +22,9 @@ public class Room implements Serializable {
 
     private String id;
 
-    private LocalDateTime createDate;
+    private Date createDate;
 
-    private LocalDateTime modifyDate;
+    private Date modifyDate;
 
     private String descri;
 
@@ -40,9 +40,9 @@ public class Room implements Serializable {
 
     private Integer controlGame;
 
-    private Integer controlModel;
+    private ControlModel controlModel;
 
-    private Integer gameType;
+    private GameType gameType;
 
     private Integer limitNum;
 
@@ -64,9 +64,9 @@ public class Room implements Serializable {
 
     private String unDead;
 
-    private Object playerOpenWinRateS1;
+    private Double playerOpenWinRateS1;
 
-    private Object playerSendWinRateS1;
+    private Double playerSendWinRateS1;
 
     private String roomId;
 
@@ -84,7 +84,7 @@ public class Room implements Serializable {
 
     private Integer gameStatus;
 
-    private LocalDateTime endDate;
+    private Date endDate;
 
     private String ownerUUID;
 

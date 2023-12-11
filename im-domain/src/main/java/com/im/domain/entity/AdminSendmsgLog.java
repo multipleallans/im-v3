@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -39,7 +39,7 @@ public class AdminSendmsgLog implements Serializable {
      */
     private String txt;
 
-    private LocalDateTime createDate;
+    private Date createDate;
 
     /**
      * 接收者ID
