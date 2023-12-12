@@ -2,6 +2,8 @@ package com.im.controller;
 
 import com.im.api.dto.UserDTO;
 import com.im.api.service.ImService;
+import com.im.api.service.MemberService;
+import com.im.domain.entity.Member;
 import com.im.service.BusinessService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,9 @@ public class SampleController {
 
     @DubboReference
     ImService imService;
+
+    @DubboReference
+    MemberService memberService;
 
     @Autowired
     BusinessService businessService;
@@ -40,6 +45,11 @@ public class SampleController {
     public UserDTO businessService() throws Exception {
         businessService.testCallImservice();
         return imService.get(1);
+    }
+
+    @RequestMapping("/getMember")
+    public Member getMember(String memberId) throws Exception {
+        return memberService.getByMemberId(memberId);
     }
 }
 

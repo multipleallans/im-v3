@@ -13,7 +13,6 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 @EnableDubbo
 @EnableAsync
-@ComponentScan("com.im")
 @EnableDiscoveryClient
 @SpringBootApplication
 public class ImSocketApplication extends SpringBootServletInitializer {
