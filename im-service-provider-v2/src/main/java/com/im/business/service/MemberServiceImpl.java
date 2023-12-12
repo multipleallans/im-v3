@@ -25,8 +25,7 @@ public class MemberServiceImpl implements MemberService {
     public Member getByNickName(String nickName) {
         QueryWrapper<Member> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("nick_name", nickName);
-        Member member = memberPersistenceService.getOne(queryWrapper);
-        return member;
+        return memberPersistenceService.getOne(queryWrapper);
     }
 
     @Override

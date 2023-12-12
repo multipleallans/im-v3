@@ -1,5 +1,6 @@
 package com.im;
 
+import jakarta.annotation.Resource;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @SpringBootApplication
 public class ImServiceProviderApplication {
 
-    @Autowired
+    @Resource
     private Environment env;
 
     public static void main(String[] args) {
