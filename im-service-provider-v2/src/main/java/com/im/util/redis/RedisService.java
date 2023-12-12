@@ -3,6 +3,8 @@ package com.im.util.redis;
 import com.alibaba.fastjson.JSONObject;
 import com.im.constant.MemberConstant;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.connection.DataType;
 import org.springframework.data.redis.core.Cursor;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -13,7 +15,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
 
-import javax.annotation.Resource;
+import javax.annotation.PostConstruct;
 import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.TimeUnit;
@@ -24,7 +26,8 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class RedisService {
 
-    @Resource(name = "stringRedisTemplate2")
+    @Autowired
+    @Qualifier("stringRedisTemplate2")
     private RedisTemplate<String,String> redisTemplate;
 
     /**
@@ -42,6 +45,7 @@ public class RedisService {
         this.redisTemplate = redisTemplate;
     }
 
+    @PostConstruct
     public RedisTemplate<String,String> getRedisTemplate() {
         return this.redisTemplate;
     }
