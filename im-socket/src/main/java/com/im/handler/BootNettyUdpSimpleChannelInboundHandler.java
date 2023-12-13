@@ -24,11 +24,11 @@ public class BootNettyUdpSimpleChannelInboundHandler extends SimpleChannelInboun
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, DatagramPacket packet) throws Exception {
         long time_stamp = System.currentTimeMillis()/1000;
-        System.out.println("received client data: "+packet.content().toString(CharsetUtil.UTF_8)+"--ip:"+packet.sender().getAddress()+"--port:"+packet.sender().getPort());
+        System.out.println("received client data: "+packet.content().toString(StandardCharsets.UTF_8)+"--ip:"+packet.sender().getAddress()+"--port:"+packet.sender().getPort());
         try {
             BootNettyUdpData bootNettyUdpData = new BootNettyUdpData();
             bootNettyUdpData.setAddress(packet.sender().getAddress().toString());
-            bootNettyUdpData.setContent("received client data: "+packet.content().toString(CharsetUtil.UTF_8));
+            bootNettyUdpData.setContent("received client data: "+packet.content().toString(StandardCharsets.UTF_8));
             bootNettyUdpData.setTime_stamp(time_stamp);
             BootNettyUdpDataCache.bootNettyUdpDataList.add(bootNettyUdpData);
             if (packet.content() instanceof ByteBuf){
