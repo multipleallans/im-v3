@@ -3,6 +3,8 @@ spring:
     import: nacos:im-service-provider-v2.yml?refresh=true
   cloud:
     nacos:
+      discovery:
+        enabled: false
       config:
         context-path: /nacos
         server-addr: 115.126.42.129:8848

@@ -125,7 +125,7 @@
 <!--        <dependency>-->
 <!--            <groupId>org.jboss.resteasy</groupId>-->
 <!--            <artifactId>resteasy-client</artifactId>-->
-<!--            <version>3.6.3.Final</version>-->
+<!--            <version>3.11.3.Final</version>-->
 <!--        </dependency>-->
 
     </dependencies>
@@ -148,7 +148,7 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.im.ImSocketApplication</mainClass>
-                    <skip>true</skip>
+<!--                    <skip>true</skip>-->
                 </configuration>
                 <executions>
                     <execution>
